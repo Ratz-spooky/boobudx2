@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marijuana Clicker</title>
+    <link rel="stylesheet" href="Css.css">
+    <script defer src="Script.js"></script>
+</head>
+<body>
+    <img src="Images/BackgroundDesign.png" class="background-image" alt="Background Design">
+    <div class="game-container">
+        <header>
+            <h1>Marijuana Clicker</h1>
+            <div id="playerStats">Nickname: <span id="nicknameDisplay"></span>, Clicks: <span id="clicksDisplay">0</span></div>
+        </header>
+        <main>
+            <div class="duck-area">
+                <div class="pet-duck">CLICK THE WEED</div>
+            </div>
+            <div id="clickBtn" class="clickable-btn">
+                <img src="Images/Clickerbud.png" alt="Click Me!" class="duck-icon"> <!-- Ensure this path is correct -->
+            </div>
+            <div class="upgrades">
+                <h2>Upgrades</h2>
+                <div class="upgrade" data-cost="150" data-power="5" data-id="blaze-boss">
+                    <img src="Images/StarterIcon.png" alt="Blaze Boss">
+                    <p>Blaze Boss<br>Cost: 150 Clicks<br>+5 Click Power</p>
+                    <button class="upgrade-btn">Buy</button>
+                </div>
+                <div class="upgrade" data-cost="500" data-power="10" data-id="Joint-juggler">
+                    <img src="Images/Starter2Icon.png" alt="Joint Juggler">
+                    <p>Joint Juggler<br>Cost: 500 Clicks<br>+10 Click Power</p>
+                    <button class="upgrade-btn">Buy</button>
+                </div>
+                <div class="upgrade" data-cost="1000" data-power="25" data-id="Grass-guru">
+                    <img src="Images/Starter3Icon.png" alt="Grass Guru">
+                    <p>Grass Guru<br>Cost: 1000 Clicks<br>+25 Click Power</p>
+                    <button class="upgrade-btn">Buy</button>
+                </div>
+                <div class="upgrade" data-cost="2500" data-power="65" data-id="Puff-cookie">
+                    <img src="Images/StarterIcon4.png" alt="Puff Cookie">
+                    <p>Puff Cookie<br>Cost: 2500 Clicks<br>+65 Click Power</p>
+                    <button class="upgrade-btn">Buy</button>
+                </div>
+                <div class="upgrade" data-cost="7000" data-power="100" data-id="Toke-monster">
+                    <img src="Images/StarterIcon5.png" alt="Toke Monster">
+                    <p>Toke Monster<br>Cost: 7000 Clicks<br>+100 Click Power</p>
+                    <button class="upgrade-btn">Buy</button>
+                </div>
+                <div class="upgrade" data-cost="15000" data-power="135" data-id="Bong-daddy">
+                    <img src="Images/StarterIcon6.png" alt="Bong Daddy">
+                    <p>Bong Daddy<br>Cost: 15000 Clicks<br>+135 Click Power</p>
+                    <button class="upgrade-btn">Buy</button>
+                </div>
+                <div class="upgrade" data-cost="25000" data-power="250" data-id="Snoops-chocolate">
+                    <img src="Images/StarterIcon7.png" alt="Snoops Chocolate">
+                    <p>Snoops Chocolate<br>Cost: 25000 Clicks<br>+250 Click Power</p>
+                    <button class="upgrade-btn">Buy</button>
+                </div>
+                <div class="upgrade" data-cost="45000" data-power="300" data-id="Uwu-leaf">
+                    <img src="Images/StarterIcon8.png" alt="Uwu Leaf">
+                    <p>Uwu Leaf<br>Cost: 45000 Clicks<br>+300 Click Power</p>
+                    <button class="upgrade-btn">Buy</button>
+                </div>
+            </div>
+            <div class="autoclick-options">
+                <button id="autoClickerBtn">Get Free Auto Clicker</button>
+            </div>
+            <div id="message"></div>
+        </main>
+        <footer>
+            <p>© 2024 BoobudX - All Rights Reserved</p>
+        </footer>
+    </div>
+</body>
+</html>
