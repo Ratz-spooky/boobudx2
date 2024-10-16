@@ -1,0 +1,83 @@
+/* Basic styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Shadows Into Light', cursive;
+    background: black;
+}
+
+.content {
+    text-align: center;
+    z-index: 2;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.stoner-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 60px;
+    color: #7FFF00; /* Weed green */
+    text-shadow: 0 0 10px #00FF00, 0 0 20px #7FFF00;
+}
+
+.center-box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #00FF00;
+}
+
+.coming-soon-text {
+    font-size: 30px;
+    color: #FFD700; /* Weed gold */
+    text-shadow: 0 0 10px #FFD700;
+}
+
+.subtext {
+    color: #F0E68C;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.enter-btn {
+    background-color: #228B22; /* Dark green button */
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.enter-btn:hover {
+    background-color: #32CD32; /* Lighter green on hover */
+    box-shadow: 0 0 10px #32CD32, 0 0 20px #7FFF00;
+}
+
+.weed-background {
+    background: url('https://images.unsplash.com/photo-1580695018128-60ae430f1916') center/cover no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+/* Responsive animation effect for background */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.weed-background {
+    animation: backgroundAnimation 20s ease-in-out infinite;
+}

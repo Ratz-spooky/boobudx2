@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hellix - Tools</title>
+    <link rel="stylesheet" href="/CssFiles/Tools.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <!-- Sidebar (Servers) -->
+        <div class="sidebar">
+            <button onclick="window.location.href='index.html'" class="Siddebarbtn" id="Btn1" title="Homepage">Home</button>
+            <button onclick="window.location.href='HtmlFiles/Tools.html'" class="Siddebarbtn" id="Btn2" title="Tools">Tools</button>
+            <button onclick="window.location.href='HtmlFiles/Misc.html'" class="Siddebarbtn" id="Btn3" title="Misc">Misc</button>
+            <button onclick="window.location.href='HtmlFiles/Support.html'" class="Siddebarbtn" id="Btn4" title="Credits and Support">Help</button>
+        </div>
+
+        <!-- Main Content -->
+        <div id="main">
+            <div id="top-bar">
+                <h2 id="server-name">Tools Page</h2>
+            </div>
+
+            <div id="content">
+                <h3>Available Tools</h3>
+
+                <!-- Tool Boxes -->
+                <div class="tool-box" id="tool1">
+                    <img src="images/tool1.png" alt="Tool 1">
+                    <h4>Tool 1: Hellix Searcher</h4>
+                    <p>Search and find as much possible information on a Roblox/Discord user.</p>
+                </div>
+
+                <div class="tool-box" id="tool2">
+                    <img src="images/tool2.png" alt="Tool 2">
+                    <h4>Tool 2: Hellix Grouper</h4>
+                    <p>Find open/Nonowner groups.</p>
+                </div>
+
+                <div class="tool-box" id="tool3">
+                    <img src="images/tool3.png" alt="Tool 3">
+                    <h4>Tool 3: Hellix Scraper</h4>
+                    <p>Scrape and extract unlimited amounts of data from websites.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Popup for Tools -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-title">Tool Title</h2>
+            <p id="modal-description">Tool Description</p>
+            <div id="modal-tool-function">Tool Functionality Here</div>
+        </div>
+    </div>
+
+    <script src="/JSFiles/Tools.js"></script>
+</body>
+</html>
