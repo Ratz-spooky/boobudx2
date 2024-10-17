@@ -3,15 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trippy Vibes</title>
-    <link rel="stylesheet" href="CssFiles/Trippy.css">
-    <script defer src="JSFiles/Trippy.js"></script>
+    <title>BoobudX Game</title>
+    <link rel="stylesheet" href="/CssFiles/Trippy.css">
+    <script defer src="/JSFiles/Trippy.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="trippy-container">
-        <div id="message">
-            <h1>Click Anywhere... Trip Out, Bro!</h1>
+    <div id="game-container">
+        <canvas id="trippyCanvas"></canvas>
+
+        <div id="ui">
+            <h1 id="gameTitle">BoobudX | Weed harvesting game</h1>
+            <h2 id="currency">Weed Bucks: <span id="currencyAmount">0</span></h2>
+
+            <div id="clickable-weed">
+                <img src="https://www.pngmart.com/files/22/Weed-PNG.png" alt="Weed Plant" id="weedPlant">
+                <p>Click the plant to harvest Weed Bucks!</p>
+            </div>
+
+            <div id="shop">
+                <h3>Stoner Shop</h3>
+                <button id="buyUpgrade">Buy Upgrade (50 Weed Bucks)</button>
+                <button id="buyDoubleHarvest">Buy Double Harvest (100 Weed Bucks)</button>
+                <button id="buyAutoClicker">Buy Auto Clicker (150 Weed Bucks)</button>
+                <button id="buyJoint">Buy Joint (200 Weed Bucks, +10 Click Power)</button>
+                <button id="buyBong">Buy Bong (500 Weed Bucks, +25 Click Power)</button>
+                <button id="buyStonerAura">Buy Stoner Aura (1000 Weed Bucks, Trippy Visuals)</button>
+                <button id="buyPrestige">Prestige (5000 Weed Bucks, +2x Earnings)</button>
+
+                <!-- New items -->
+                <button id="buyMunchiesBoost">Munchies Boost (300 Weed Bucks, +5 Auto Clicker Speed)</button>
+                <button id="buyBlazingBlunt">Blazing Blunt (750 Weed Bucks, +50 Click Power)</button>
+                <button id="buy420Special">420 Special (4200 Weed Bucks, Insane Earnings for 4 minutes)</button>
+                <button id="buyStonerGlasses">Stoner Glasses (900 Weed Bucks, +10 Click Power)</button>
+                <button id="buyFatBlunt">Fat Blunt (1200 Weed Bucks, +75 Click Power)</button>
+                <button id="buyChronicCloud">Chronic Cloud (2000 Weed Bucks, +Auto Clicker x2 Speed)</button>
+                <button id="buyStickyIcky">Sticky Icky (1500 Weed Bucks, +100 Click Power)</button>
+                <button id="buyGanjaGod">Ganja God (3000 Weed Bucks, +Auto Clicker x3 Speed)</button>
+                <button id="buyKiefBoost">Kief Boost (600 Weed Bucks, +50% Earnings)</button>
+                <button id="buyHashHit">Hash Hit (1100 Weed Bucks, +20 Click Power)</button>
+                <button id="buyMoonRocks">Moon Rocks (2500 Weed Bucks, +500% Earnings for 5 minutes)</button>
+                <button id="buyTHCVapor">THC Vapor (800 Weed Bucks, +Auto Clicker 5 Speed)</button>
+                <button id="buyDabRig">Dab Rig (3500 Weed Bucks, +150 Click Power)</button>
+                <button id="buyKushKing">Kush King (4000 Weed Bucks, +Double Earnings)</button>
+                <button id="buyEdiblesRush">Edibles Rush (2000 Weed Bucks, +300% Earnings for 10 minutes)</button>
+                <button id="buyOGKushBoost">OG Kush Boost (5000 Weed Bucks, +Trippy Backgrounds)</button>
+            </div>
+
+            <div id="achievements">
+                <h3>Achievements</h3>
+                <ul id="achievementsList"></ul>
+            </div>
+
+            <div id="randomEvents">
+                <h3>Random Events</h3>
+                <p id="eventMessage">No events happening now...</p>
+            </div>
+
+            <div id="message">
+                <button id="startButton">Start Trippy Adventure</button>
+            </div>
         </div>
     </div>
 </body>
