@@ -1,56 +1,203 @@
-/* General body styles */
+/* Main body and global styles */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden;
     font-family: 'Shadows Into Light', cursive;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(45deg, #1a1a1a, #0d0d0d);
+    color: white;
+    overflow: hidden;
 }
 
-/* Container for the background effect */
-#trippy-container {
+/* Game Container */
+#game-container {
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    transition: background-color 3s ease;
 }
 
-/* Message at the center */
-#message {
+/* Trippy Canvas */
+canvas {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: radial-gradient(circle, rgba(29,185,84,0.6), rgba(255,255,255,0));
+    animation: pulseBg 5s infinite;
+}
+
+/* Glowing Weed Bucks */
+#currency {
+    font-size: 2.5em;
+    color: #00ff00;
+    text-shadow: 0 0 10px limegreen, 0 0 20px green;
+    animation: glowCurrency 2s infinite alternate;
+    margin-top: 20px;
+}
+
+#currencyAmount {
+    font-weight: bold;
+    color: #00ff00;
+    text-shadow: 0 0 10px limegreen, 0 0 20px green;
+}
+
+/* Weed Plant */
+#clickable-weed img {
+    width: 250px;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+#clickable-weed img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px greenyellow, 0 0 40px #33ff33;
+}
+
+/* Shop and buttons */
+#shop {
+    margin-top: 30px;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 1.5em;
+    font-weight: bold;
     color: white;
-    text-shadow: 0px 0px 10px green, 0px 0px 20px purple;
+    background-color: #3b3b3b;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #33ff33;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    margin: 10px;
+    text-shadow: 0 0 5px greenyellow;
+    cursor: pointer;
+    animation: pulseButton 2.5s infinite ease-in-out;
 }
 
-h1 {
-    font-size: 3em;
-    animation: glow 2s infinite alternate;
+button:hover {
+    background-color: #1f1f1f;
+    box-shadow: 0 0 30px #4caf50;
 }
 
-@keyframes glow {
-    from {
-        text-shadow: 0px 0px 10px green, 0px 0px 20px purple;
+/* Game title */
+#gameTitle {
+    font-size: 4em;
+    text-shadow: 0px 0px 10px #00ff00, 0px 0px 20px #33ff33;
+    margin-bottom: 30px;
+    animation: glowTitle 4s infinite alternate;
+}
+
+/* Achievements section */
+#achievements {
+    margin-top: 30px;
+    color: #ffcc00;
+    text-align: center;
+}
+
+#achievements ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#achievements li {
+    margin: 5px 0;
+    font-size: 1.2em;
+    text-shadow: 0 0 10px yellow;
+}
+
+/* Random events */
+#randomEvents {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#eventMessage {
+    color: #ff6699;
+    font-size: 1.2em;
+    animation: glowEventMessage 2s infinite alternate;
+}
+
+/* Start Button */
+#startButton {
+    padding: 15px 40px;
+    font-size: 2em;
+    background-color: #5e5e5e;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #33ff33, 0 0 40px #00ff00;
+    animation: bounceStartButton 1.8s infinite ease-in-out;
+    cursor: pointer;
+}
+
+#startButton:hover {
+    background-color: #4b4b4b;
+    box-shadow: 0 0 30px #33ff33;
+}
+
+/* Animations */
+@keyframes pulseBg {
+    0%, 100% {
+        background: radial-gradient(circle, rgba(29,185,84,0.6), rgba(255,255,255,0));
     }
-    to {
-        text-shadow: 0px 0px 20px red, 0px 0px 40px blue;
+    50% {
+        background: radial-gradient(circle, rgba(66,245,107,0.6), rgba(255,255,255,0));
     }
 }
 
-/* Trippy background effects */
-@keyframes trippyBackground {
-    0% { background-color: #1a1a1a; }
-    20% { background-color: #662d91; }
-    40% { background-color: #ff6699; }
-    60% { background-color: #ffcc33; }
-    80% { background-color: #99ff33; }
-    100% { background-color: #33ccff; }
+@keyframes glowCurrency {
+    0% {
+        text-shadow: 0 0 10px limegreen, 0 0 20px green;
+    }
+    100% {
+        text-shadow: 0 0 20px limegreen, 0 0 30px darkgreen;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulseButton {
+    0%, 100% {
+        box-shadow: 0 0 15px #33ff33;
+    }
+    50% {
+        box-shadow: 0 0 30px #33ff33;
+    }
+}
+
+@keyframes glowTitle {
+    0% {
+        text-shadow: 0 0 10px #00ff00, 0 0 20px #33ff33;
+    }
+    100% {
+        text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+    }
+}
+
+@keyframes bounceStartButton {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes glowEventMessage {
+    0% {
+        text-shadow: 0 0 10px #ff6699;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff99cc;
+    }
 }
